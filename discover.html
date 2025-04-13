@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist  of Gilgit Baltistan</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(3,36,90);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            
+        }
+
+        /* Main Heading */
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff9933;
+        }
+
+        /* Subheading */
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #eae6e6;
+        }
+
+        /* Container for Cards */
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Individual Card Styling */
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(25% - 20px); /* 4 cards in a row with gap */
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Card Image */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Card Heading */
+        .card h1 {
+            font-size: 24px;
+            margin: 15px 0 10px;
+            color: #ff9933;
+        }
+
+        /* Card Subheading */
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #da7676;
+        }
+
+        /* Card Text */
+        .card p {
+            font-size: 14px;
+            color: #000000;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styling */
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%; /* 1 card in a row on mobile */
+            }
+        }
+        /* foooo */
+
+
+        body {
+            margin-top: 30px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Footer Styling */
+        .custom-footer {
+            background-color: #003366; /* Dark blue */
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Footer Sections */
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #FFA500; /* Orange */
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: #FFA500; /* Orange on hover */
+        }
+
+        /* Social Links */
+        .social-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Quick Links */
+        .quick-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-section {
+                flex: 100%;
+                margin: 10px 0;
+            }
+        }
+/* AUTOPLAY IMAGES */
+.slider{
+    /* min-height: 100vh; */
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40% linear infinite;
+}
+.slide-track :hover{
+    animation-play-state: paused;
+}
+@keyframes scroll {
+   0%{
+    transform: translateX(0);
+   } 
+   100%{
+    transform: translateX(calc(-250px*9));
+   }
+}
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;  
+}
+img{
+    width: 100%;
+}
+img:hover{
+    transform: translateZ(20px);
+}
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right,rgba(255,255,255,1)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+.slider::before{
+    left: 0;
+    top: 0;
+}
+.slider::after{
+    right: 0;
+    top: 0%;
+
+}
+.body-2{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Tourist Destinations of Gilgit Baltistan</h1>
+<!-- Auto play images -->
+ <!-- <div class="body-2">
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide">
+            <img src="ghanche.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="kharmang.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="Astore.jpeg" alt="">
+        </div>
+        <div class="slide">
+            <img src="roadofgb.jpeg" alt="">
+        </div>
+        <div class="slide">
+            <img src="kharmang.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="nagar.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="daimer.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="gilgit.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="Skardu.jpeg" alt="">
+        </div>
+        <div class="slide">
+            <img src="shigar.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="hunza.jpg" alt="">
+        </div>
+
+    </div>
+</div>
+</div> -->
+
+
+
+
+
+    <div class="well-video">
+        <div id="video" style="margin-left: 23%;">
+<video src="Gilgit Baltistan web video.mp4" controls></video>
+    </div>
+</div>
+    <h2>Gilgit Baltistan has 14 Different Districts with different cultures and traditions.</h2>
+
+    <div class="card-container">
+        <!-- Card 1: Gilgit -->
+        <div class="card">
+            <img src="Gilgit.jpeg" alt="Gilgit">
+            <h1>Gilgit</h1>
+            <h2>LAND OF DIVERSITY</h2>
+            <p>District Gilgit, capital of Gilgit-Baltistan, is strategically the most important territory in the Karakorum Range as it has been the trade center of the area.</p>
+            <a href="https://en.wikipedia.org/wiki/Gilgit_District"><button>View More</button></a>
+        </div>
+
+        <!-- Card 2: Astore -->
+        <div class="card">
+            <img src="Astore.jpeg" alt="Astore">
+            <h1>Astore</h1>
+            <h2>LAND OF PASTURE</h2>
+            <p>Astore District is one of the ten districts in Gilgit−Baltistan, with its administrative centers located in Eidgah and Gorikot. To the north, it borders Gilgit.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 3: Skardu -->
+        <div class="card">
+            <img src="Skardu.jpeg" alt="Skardu">
+            <h1>Skardu</h1>
+            <h2>LAND OF PEACE</h2>
+            <p>District Skardu in Baltistan Division is located at the confluence of Indus River and Shayok River that leads toward the legendary tourist destination of the region.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 4: Hunza -->
+        <div class="card">
+            <img src="Hunza.jpeg" alt="Hunza">
+            <h1>Hunza</h1>
+            <h2>LAND OF BEAUTY</h2>
+            <p>Hunza Valley is known for its breathtaking landscapes, rich culture, and hospitable people. It is one of the most popular tourist destinations in Pakistan.</p>
+            <button>View More</button>
+        </div>
+    </div>
+
+
+    <!-- 2nd card  District -->
+    
+    <div class="card-container">
+        <!-- Card 1: Gilgit -->
+        <div class="card">
+            <img src="ghanche.jpg" alt="Gilgit">
+            <h1>Ghanche</h1>
+            <h2>LAND OF DIVERSITY</h2>
+            <p>District Gilgit, capital of Gilgit-Baltistan, is strategically the most important territory in the Karakorum Range as it has been the trade center of the area.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 2: Astore -->
+        <div class="card">
+            <img src="Astore.jpeg" alt="Astore">
+            <h1>Gupis-Yasin</h1>
+            <h2>LAND OF PASTURE</h2>
+            <p>Astore District is one of the ten districts in Gilgit−Baltistan, with its administrative centers located in Eidgah and Gorikot. To the north, it borders Gilgit.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 3: Skardu -->
+        <div class="card">
+            <img src="shigar.jpg" alt="Skardu">
+            <h1>Shigar</h1>
+            <h2>LAND OF PEACE</h2>
+            <p>District Skardu in Baltistan Division is located at the confluence of Indus River and Shayok River that leads toward the legendary tourist destination of the region.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 4: Hunza -->
+        <div class="card">
+            <img src="kharmang.jpg" alt="Hunza">
+            <h1>Kharmang</h1>
+            <h2>LAND OF BEAUTY</h2>
+            <p>Hunza Valley is known for its breathtaking landscapes, rich culture, and hospitable people. It is one of the most popular tourist destinations in Pakistan.</p>
+            <button>View More</button>
+        </div>
+    </div>
+
+
+
+    <!-- 3rd card  District-->
+      
+    <div class="card-container">
+        <!-- Card 1: Gilgit -->
+        <div class="card">
+            <img src="daimer.jpg" alt="Gilgit">
+            <h1>Diamer</h1>
+            <h2>LAND OF DIVERSITY</h2>
+            <p>District Gilgit, capital of Gilgit-Baltistan, is strategically the most important territory in the Karakorum Range as it has been the trade center of the area.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 2: Astore -->
+        <div class="card">
+            <img src="ghizer.jpg" alt="Astore">
+            <h1>Ghizer</h1>
+            <h2>LAND OF PASTURE</h2>
+            <p>Astore District is one of the ten districts in Gilgit−Baltistan, with its administrative centers located in Eidgah and Gorikot. To the north, it borders Gilgit.</p>
+            <button>View More </button>
+        </div>
+
+        <!-- Card 3: Skardu -->
+        <div class="card">
+            <img src="nagar.jpg" alt="Skardu">
+            <h1>Nagar</h1>
+            <h2>LAND OF PEACE</h2>
+            <p>District Skardu in Baltistan Division is located at the confluence of Indus River and Shayok River that leads toward the legendary tourist destination of the region.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 4: Hunza -->
+        <div class="card">
+            <img src="Hunza.jpeg" alt="Hunza">
+            <h1>Tangir</h1>
+            <h2>LAND OF BEAUTY</h2>
+            <p>Hunza Valley is known for its breathtaking landscapes, rich culture, and hospitable people. It is one of the most popular tourist destinations in Pakistan.</p>
+            <button>View More</button>
+        </div>
+    </div>
+
+    <!-- 4th card District -->
+
+    <div class="card-container" style="display: flex; justify-content: left;">
+        <!-- Card 1: Gilgit -->
+        <div class="card">
+            <img src="Gilgit.jpeg" alt="Gilgit">
+            <h1>Darel</h1>
+            <h2>LAND OF DIVERSITY</h2>
+            <p>District Gilgit, capital of Gilgit-Baltistan, is strategically the most important territory in the Karakorum Range as it has been the trade center of the area.</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Card 2: Astore -->
+        <div class="card">
+            <img src="Astore.jpeg" alt="Astore">
+            <h1>Roundu</h1>
+            <h2>LAND OF PASTURE</h2>
+            <p>Astore District is one of the ten districts in Gilgit−Baltistan, with its administrative centers located in Eidgah and Gorikot. To the north, it borders Gilgit.</p>
+            <button>View More</button>
+        </div>
+
+    </div>
+    <!-- 5th card District -->
+
+    <!-- fooooooo -->
+    <footer class="custom-footer">
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Secretary</h3>
+            <p>Government of Gilgit Baltistan</p>
+            <p>Government of Gilgit-Baltistan Tourism, Sports Culture Archaeology & Museums Department</p>
+            <p>Block A, 1st Floor, Gilgit-Baltistan Secretariat Building Jutial, Gilgit</p>
+            <p>Phone: 05811-920173</p>
+            <p>Email: tourismsecretariatgb@gmail.com</p>
+        </div>
+
+        <!-- Site Navigation -->
+        <div class="footer-section">
+            <h3>Site Navigation</h3>
+            <a href="#">About Us</a>
+            <a href="#">Info Desk</a>
+            <a href="#">Discover GB</a>
+            <a href="#">News</a>
+            <a href="#">Events</a>
+            <a href="#">Gallery</a>
+            <a href="#">Downloads</a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+            <h3>Social Links</h3>
+            <div class="social-links">
+                <a href="#">Facebook Page</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube Channel</a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+                <a href="#">Calendar of Events 2024</a>
+                <a href="#">Tourist Guide Map (GB)</a>
+                <a href="#">Sarfaranga Cold Desert Event</a>
+                <a href="#">Sevendays Winter Feast 2024</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

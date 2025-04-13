@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Cards Layout</title>  
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(3,36,90);
+            padding: 20px;
+        }
+
+        /* Container for Cards */
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Card Styling */
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(25% - 20px); /* 4 cards in a row with gap */
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Card Image */
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Card Name */
+        .card h3 {
+            margin: 15px 0 10px;
+            font-size: 18px;
+            color: #ff9933;
+        }
+
+        /* Card Text */
+        .card p {
+            font-size: 14px;
+            color: #000000;
+            line-height: 1.5;
+        }
+
+
+
+
+        /* footer */
+        /* Footer Styling */
+.custom-footer {
+    background-color: #011f3e; /* Dark blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFA500; /* Orange */
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-section a:hover {
+    color: #FFA500; /* Orange on hover */
+}
+
+/* Social Links */
+.social-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Quick Links */
+.quick-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px); /* 2 cards in a row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%; /* 1 card in a row on mobile */
+            }
+        }
+        h1{
+            font-family: sans-serif;
+             display: flex; 
+             justify-content: center;
+             margin-bottom: 30px;
+             color: #ff9933;
+        }
+    </style>
+</head>
+<body>
+    <h1>Core Team</h1>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="zubaida.jpg" alt="Image 1">
+            <h3>Zubaida Batool</h3>
+            <p>(Deputy Secretary)</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="zameer.jpg" alt="Image 2">
+            <h3>Zameer Abbas</h3>
+            <p>(Secretary Tourism ,Sport & Culture)</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="mehboob ali.jpg" alt="Image 3">
+            <h3>Mehboob</h3>
+            <p>(Deputy Secretary)</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="iqbal.jpg" alt="Image 4">
+            <h3>Iqbal Hussain</h3>
+            <p>(Director Tourism & culture)</p>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+
+    <!-- new footer -->
+       <!-- fooooooo -->
+       <footer class="custom-footer">
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Secretary</h3>
+            <p>Government of Gilgit Baltistan</p>
+            <p>Government of Gilgit-Baltistan Tourism, Sports Culture Archaeology & Museums Department</p>
+            <p>Block A, 1st Floor, Gilgit-Baltistan Secretariat Building Jutial, Gilgit</p>
+            <p>Phone: 05811-920173</p>
+            <p>Email: tourismsecretariatgb@gmail.com</p>
+        </div>
+
+        <!-- Site Navigation -->
+        <div class="footer-section">
+            <h3>Site Navigation</h3>
+            <a href="#">About Us</a>
+            <a href="#">Info Desk</a>
+            <a href="#">Discover GB</a>
+            <a href="#">News</a>
+            <a href="#">Events</a>
+            <a href="#">Gallery</a>
+            <a href="#">Downloads</a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+            <h3>Social Links</h3>
+            <div class="social-links">
+                <a href="#">Facebook Page</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube Channel</a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+                <a href="#">Calendar of Events 2024</a>
+                <a href="#">Tourist Guide Map (GB)</a>
+                <a href="#">Sarfaranga Cold Desert Event</a>
+                <a href="#">Sevendays Winter Feast 2024</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
